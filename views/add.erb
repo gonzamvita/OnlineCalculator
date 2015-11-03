@@ -5,12 +5,13 @@
 </head>
 <body>
   <h1>Add</h1>
-  <form action="add" method="post">
-    <input type="text" name="sum1" value="0">
+  <form id="sum" action="add" method="post">
+    <input type="text" name="sum1" placeholder="0">
     <p>+</p>
-    <input type="text" name="sum2" value="0">
+    <input type="text" name="sum2" placeholder="0">
     <p>=</p>
     <input type="submit" value="Calcular">
   </form>
+    <p><%= @result %></p>
 </body>
 </html>

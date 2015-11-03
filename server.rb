@@ -2,17 +2,17 @@ require "sinatra"
 
 
 get "/" do
-  erb(:home)
+  erb :home
 end
 
 get "/add" do
-  erb(:add)
+  erb :add
 end
 
 post "/add" do
-  @result = params[:sum1] + params[:sum2]
+  @result = params[:sum1].to_i + params[:sum2].to_i
 
-  erb(:add)
+  erb :add
 end
 
 # get "/author" do

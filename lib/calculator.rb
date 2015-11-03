@@ -8,12 +8,12 @@ class Calculator
   def operation
   if @operation == "addition"
     @number1 + @number2
-  elsif @operation == "subtraction"    
+  elsif @operation == "subtraction"
     @number1 - @number2
   elsif @operation == "multiplication"
-      @number1 * @number2
+      @number1 * @number2.round(3)
   elsif @operation == "divition"
-    @number1 / @number2
+    (@number1 / @number2).round(3)
   end
   end
 end

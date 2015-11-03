@@ -1,0 +1,8 @@
+input{
+  display: inline-block;
+}
+
+body, form{
+  height: 100%;
+  width: 100%;
+}

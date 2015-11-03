@@ -5,9 +5,15 @@ get "/" do
   erb(:home)
 end
 
-# get "/about" do
-#   "Learning Sinatra in Ironhack"
-# end
+get "/add" do
+  erb(:add)
+end
+
+post "/add" do
+  @result = params[:sum1] + params[:sum2]
+
+  erb(:add)
+end
 
 # get "/author" do
 #   @greeting = "Hello World!!"

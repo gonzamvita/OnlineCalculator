@@ -1,4 +1,5 @@
 require "sinatra"
+# require_relative "./lib/"
 
 
 get "/" do
@@ -10,27 +11,7 @@ get "/add" do
 end
 
 post "/add" do
-  @result = params[:sum1].to_i + params[:sum2].to_i
+  @result = params[:number1].to_i + params[:number2].to_i
 
-  erb :add
+  erb :result
 end
-
-# get "/author" do
-#   @greeting = "Hello World!!"
-#   @thetime = Time.now()
-#   @ingredients = ["cheese", "pepperoni", "mushrooms"]
-#   erb(:author)
-# end
-
-# get "/users/:username" do
-#   @username = params[:username]
-
-#   erb(:user_profile)
-# end
-
-# get "/hours/ago/:shift" do
-#   @shift = params[:shift].to_i
-#   @adjusted_datetime = (Time.now - @shift*60*60).to_datetime
-
-#   erb(:hours_ago)
-# end

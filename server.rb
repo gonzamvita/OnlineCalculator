@@ -1,17 +1,19 @@
 require "sinatra"
-# require_relative "./lib/"
+require_relative "./lib/calculator.rb"
 
 
 get "/" do
   erb :home
 end
 
-get "/add" do
-  erb :add
+get "/operations" do
+  erb :operations
 end
 
-post "/add" do
-  @result = params[:number1].to_i + params[:number2].to_i
-
+post "/operations" do
+	@operation = params[:operation]
+	@number1 = params[:number1].to_i
+	@number2 = params[:number2].to_i
+	@result = Calculator.new(@number1,@number2,@operation).operation
   erb :result
 end

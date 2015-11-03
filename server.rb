@@ -22,7 +22,7 @@ end
 post "/memory" do
   @numberToSave = params[:result]
 
-  Memory.new(@numberToSave)
+  Memory.new.save_number_in_file(@numberToSave)
   redirect to :operations
 end
 
